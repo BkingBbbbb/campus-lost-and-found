@@ -100,4 +100,3 @@ export default function LostPage() {
     </div>
   );
 }
-export const dynamic = 'force-dynamic';
