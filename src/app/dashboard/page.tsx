@@ -154,3 +154,4 @@ export default function DashboardPage() {
     </div>
   );
 }
+export const dynamic = 'force-dynamic';

@@ -284,3 +284,4 @@ export default function PostPage() {
     </div>
   );
 }
+export const dynamic = 'force-dynamic';

@@ -240,3 +240,4 @@ export default function ItemDetailPage() {
     </div>
   );
 }
+export const dynamic = 'force-dynamic';

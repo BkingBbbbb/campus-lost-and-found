@@ -97,3 +97,4 @@ export default function FoundPage() {
     </div>
   );
 }
+export const dynamic = 'force-dynamic';
