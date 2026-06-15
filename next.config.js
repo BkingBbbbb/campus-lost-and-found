@@ -8,6 +8,10 @@ const nextConfig = {
       },
     ],
   },
+  // Vercel 构建兼容
+  experimental: {
+    esmExternals: 'loose',
+  },
 };
 
 module.exports = nextConfig;
