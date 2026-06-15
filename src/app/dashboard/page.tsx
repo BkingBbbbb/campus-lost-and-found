@@ -53,7 +53,8 @@ export default function DashboardPage() {
 
   const handleDeleteItem = async (id: number) => {
     if (!confirm('确定要删除这条信息吗？')) return;
-    const { error } = await supabase.from('items').delete().eq('id', id);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const { error } = await (supabase.from('items').delete as any)().eq('id', id);
     if (!error) {
       setItems(items.filter(i => i.id !== id));
     }

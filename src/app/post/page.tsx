@@ -83,7 +83,8 @@ export default function PostPage() {
         imageUrl = publicUrl;
       }
 
-      const { error } = await supabase.from('items').insert({
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const { error } = await (supabase.from('items').insert as any)({
         type: form.type as ItemType,
         title: form.title,
         description: form.description || null,

@@ -56,7 +56,8 @@ export default function ItemDetailPage() {
     setSubmitting(true);
 
     try {
-      const { error } = await supabase.from('claims').insert({
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const { error } = await (supabase.from('claims').insert as any)({
         item_id: item.id,
         claimant_name: claimForm.name,
         claimant_phone: claimForm.phone || null,

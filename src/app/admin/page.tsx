@@ -41,12 +41,14 @@ export default function AdminPage() {
   };
 
   const updateItemStatus = async (id: number, status: string) => {
-    await supabase.from('items').update({ status }).eq('id', id);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await (supabase.from('items').update as any)({ status }).eq('id', id);
     fetchData();
   };
 
   const updateClaimStatus = async (id: number, status: string) => {
-    await supabase.from('claims').update({ status }).eq('id', id);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await (supabase.from('claims').update as any)({ status }).eq('id', id);
     fetchData();
   };
 
